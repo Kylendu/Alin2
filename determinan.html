@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Determinan &#8212; My sample book</title>
+    <title>Determinan Matriks &#8212; My sample book</title>
   
   
   
@@ -181,7 +181,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tugas2.html">Aljabar Matrik</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sistemlinier.html">Eliminasi Gaussian</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas3.html">Matrik Invers</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Determinan</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Determinan Matriks</a></li>
 </ul>
 
     </div>
@@ -367,7 +367,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Determinan</h1>
+    <h1>Determinan Matriks</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -377,8 +377,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-determinan-matrik">Rumus Determinan Matrik</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-determinan">Sifat-sifat determinan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-determinan-matriks">Rumus Determinan Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-metode-kofaktor">Pengertian Metode Kofaktor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-menghitung-determinan-dengan-metode-kofaktor">Langkah-langkah Menghitung Determinan dengan Metode Kofaktor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-ekspansi-kofaktor">Rumus Ekspansi Kofaktor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-determinan">Sifat-sifat determinan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengitung-invers-matrik-5-x-5">Mengitung Invers Matrik 5 X 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengitung-determinan-mtrik-5-x-5-menggunakan-metode-kofaktor">Mengitung Determinan Mtrik 5 x 5 Menggunakan Metode Kofaktor</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -390,17 +397,65 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="determinan">
-<h1>Determinan<a class="headerlink" href="#determinan" title="Link to this heading">#</a></h1>
-<p>Determinan matriks merupakan suatu nilai yang dihitung dari unsur-unsur matriks persegi.</p>
-<section id="rumus-determinan-matrik">
-<h2>Rumus Determinan Matrik<a class="headerlink" href="#rumus-determinan-matrik" title="Link to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\begin{split}
-A det=\begin{bmatrix}
-a &amp; b\\
-c &amp; d 
-\end{bmatrix}\end{split}\\= ad - bc\end{aligned}\end{align} \]</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="determinan-matriks">
+<h1>Determinan Matriks<a class="headerlink" href="#determinan-matriks" title="Link to this heading">#</a></h1>
+<p>Determinant adalah suatu nilai skalar yang dapat dihitung dari suatu matriks persegi (matriks dengan jumlah baris dan kolom yang sama). Determinan memiliki beberapa aplikasi penting dalam matematika, termasuk dalam pemecahan sistem persamaan linear, analisis kebalikan matriks, dan teori eigen.</p>
+<section id="rumus-determinan-matriks">
+<h2>Rumus Determinan Matriks<a class="headerlink" href="#rumus-determinan-matriks" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Matriks Ordo 2x2:</strong>
+Jika A adalah matriks 2 X 2 dengan elemen:
+$<span class="math notranslate nohighlight">\(
+A = \begin{pmatrix}
+a &amp; b \\
+c &amp; d
+\end{pmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Maka determinan det(A) adalah:
+\)</span><span class="math notranslate nohighlight">\(
+\text{det}(A) = ad - bc
+\)</span>$</p></li>
+<li><p><strong>Matriks Ordo 3x3:</strong>
+Jika A adalah matriks 3 X 3 dengan elemen:
+$<span class="math notranslate nohighlight">\(
+A = \begin{pmatrix}
+a &amp; b &amp; c \\
+d &amp; e &amp; f \\
+g &amp; h &amp; i
+\end{pmatrix}
+\)</span><span class="math notranslate nohighlight">\(
+Maka determinan det (A) adalah:
+\)</span><span class="math notranslate nohighlight">\(
+\text{det}(A) = a(ei - fh) - b(di - fg) + c(dh - eg)
+\)</span>$</p></li>
+<li><p><strong>Matriks Ordo n X n :</strong>
+Untuk matriks ordo lebih tinggi, determinan dapat dihitung menggunakan ekspansi kofaktor atau metode lain seperti eliminasi Gauss.</p></li>
+</ol>
+</section>
+<section id="pengertian-metode-kofaktor">
+<h2>Pengertian Metode Kofaktor<a class="headerlink" href="#pengertian-metode-kofaktor" title="Link to this heading">#</a></h2>
+<p>Metode kofaktor adalah salah satu cara untuk menghitung determinan matriks persegi berordo n X n. Metode ini melibatkan penghapusan baris dan kolom untuk menghasilkan matriks minor, kemudian mengalikan elemen-elemen tertentu dengan determinan minor tersebut dan kofaktornya, lalu menjumlahkan hasilnya.</p>
+</section>
+<section id="langkah-langkah-menghitung-determinan-dengan-metode-kofaktor">
+<h2>Langkah-langkah Menghitung Determinan dengan Metode Kofaktor<a class="headerlink" href="#langkah-langkah-menghitung-determinan-dengan-metode-kofaktor" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Pilih baris atau kolom untuk ekspansi kofaktor.</strong> Biasanya, baris atau kolom dengan banyak nol dipilih untuk mengurangi jumlah perhitungan.</p></li>
+<li><p><strong>Hitung kofaktor</strong> untuk setiap elemen dalam baris atau kolom yang dipilih.</p>
+<ul class="simple">
+<li><p><strong>Minor:</strong> Hapus baris dan kolom dari elemen yang dipilih, kemudian hitung determinan dari matriks yang tersisa.</p></li>
+<li><p><strong>Kofaktor:</strong> Kalikan minor dengan (-1)^{i+j}, di mana i dan j adalah indeks baris dan kolom elemen.</p></li>
+</ul>
+</li>
+<li><p><strong>Jumlahkan hasil perkalian</strong> elemen dengan kofaktornya.</p></li>
+</ol>
+</section>
+<section id="rumus-ekspansi-kofaktor">
+<h2>Rumus Ekspansi Kofaktor<a class="headerlink" href="#rumus-ekspansi-kofaktor" title="Link to this heading">#</a></h2>
+<p>Untuk matriks A berordo n X n, determinan det(A) dapat dihitung sebagai:
+$<span class="math notranslate nohighlight">\(
+\text{det}(A) = \sum_{j=1}^{n} (-1)^{i+j} \cdot a_{ij} \cdot \text{det}(M_{ij})
+\)</span>$</p>
+<p>di mana a_{ij} adalah elemen pada baris i dan kolom j , dan M_{ij} adalah minor matriks yang diperoleh dengan menghapus baris i dan kolom j.</p>
 </section>
 <section id="sifat-sifat-determinan">
 <h2>Sifat-sifat determinan<a class="headerlink" href="#sifat-sifat-determinan" title="Link to this heading">#</a></h2>
@@ -409,6 +464,120 @@ c &amp; d
 <li><p>jika matrik b 2* matrik a itu bisa dihitung dengan rumus 2^3(ordo)* det a = det b</p></li>
 <li><p>jika matrik b colom pertama 2* matrik a colom pertama itu akan menghasilkan 2*det a</p></li>
 </ol>
+<section id="mengitung-invers-matrik-5-x-5">
+<h3>Mengitung Invers Matrik 5 X 5<a class="headerlink" href="#mengitung-invers-matrik-5-x-5" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">get_minor</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
+    <span class="n">minor</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">j</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">minor</span>
+
+<span class="k">def</span> <span class="nf">determinant</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+    
+    <span class="n">det</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+        <span class="n">det</span> <span class="o">+=</span> <span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="n">col</span><span class="p">)</span> <span class="o">*</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">*</span> <span class="n">determinant</span><span class="p">(</span><span class="n">get_minor</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">col</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">det</span>
+
+<span class="k">def</span> <span class="nf">cofactor_matrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
+    <span class="n">cofactors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+            <span class="n">minor</span> <span class="o">=</span> <span class="n">get_minor</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+            <span class="n">cofactors</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="p">))</span> <span class="o">*</span> <span class="n">determinant</span><span class="p">(</span><span class="n">minor</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cofactors</span>
+
+<span class="k">def</span> <span class="nf">inverse</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
+    <span class="n">det</span> <span class="o">=</span> <span class="n">determinant</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">det</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Matrix is singular and cannot be inverted.&quot;</span><span class="p">)</span>
+    
+    <span class="n">cofactors</span> <span class="o">=</span> <span class="n">cofactor_matrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+    <span class="n">adjugate</span> <span class="o">=</span> <span class="n">cofactors</span><span class="o">.</span><span class="n">T</span>
+    <span class="n">inv_matrix</span> <span class="o">=</span> <span class="n">adjugate</span> <span class="o">/</span> <span class="n">det</span>
+    <span class="k">return</span> <span class="n">inv_matrix</span>
+
+<span class="c1"># Contoh penggunaan</span>
+<span class="n">matrix_5x5</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">inv_matrix_5x5</span> <span class="o">=</span> <span class="n">inverse</span><span class="p">(</span><span class="n">matrix_5x5</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inverse matrik 5x5:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">inv_matrix_5x5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Inverse matrik 5x5:
+[[ 0.15654131  0.05143041  0.53616201 -0.82449373  0.14175506]
+ [ 0.16232723 -0.16843459 -0.05593057  0.07521697  0.06075217]
+ [-0.13114754 -0.01639344 -0.24590164  0.60655738 -0.16393443]
+ [ 0.04982321  0.1067181   0.01253616 -0.08582449 -0.03085824]
+ [-0.08003857  0.04146577 -0.14271938  0.05400193  0.12054002]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mengitung-determinan-mtrik-5-x-5-menggunakan-metode-kofaktor">
+<h3>Mengitung Determinan Mtrik 5 x 5 Menggunakan Metode Kofaktor<a class="headerlink" href="#mengitung-determinan-mtrik-5-x-5-menggunakan-metode-kofaktor" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">cofactor</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
+    <span class="c1"># Menghapus baris &#39;row&#39; dan kolom &#39;col&#39; dari matriks</span>
+    <span class="n">minor</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">row</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">col</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="n">row</span> <span class="o">+</span> <span class="n">col</span><span class="p">))</span> <span class="o">*</span> <span class="n">determinant</span><span class="p">(</span><span class="n">minor</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">determinant</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
+    <span class="c1"># Basis: jika matriks 1x1</span>
+    <span class="k">if</span> <span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+    
+    <span class="c1"># Basis: jika matriks 2x2</span>
+    <span class="k">if</span> <span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+    
+    <span class="n">det</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># Ekspansi kofaktor pada baris pertama</span>
+    <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+        <span class="n">det</span> <span class="o">+=</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">*</span> <span class="n">cofactor</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">det</span>
+
+<span class="c1"># Contoh penggunaan</span>
+<span class="n">matrix_5x5</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">det_5x5</span> <span class="o">=</span> <span class="n">determinant</span><span class="p">(</span><span class="n">matrix_5x5</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Determinan menggunakan metode kofaktor: </span><span class="si">{</span><span class="n">det_5x5</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Determinan menggunakan metode kofaktor: -3111
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -469,6 +638,7 @@ ini determinan matrik segitiga bawah 2.0
 </div>
 </section>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -525,8 +695,15 @@ ini determinan matrik segitiga bawah 2.0
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-determinan-matrik">Rumus Determinan Matrik</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-determinan">Sifat-sifat determinan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-determinan-matriks">Rumus Determinan Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-metode-kofaktor">Pengertian Metode Kofaktor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-menghitung-determinan-dengan-metode-kofaktor">Langkah-langkah Menghitung Determinan dengan Metode Kofaktor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-ekspansi-kofaktor">Rumus Ekspansi Kofaktor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-determinan">Sifat-sifat determinan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengitung-invers-matrik-5-x-5">Mengitung Invers Matrik 5 X 5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengitung-determinan-mtrik-5-x-5-menggunakan-metode-kofaktor">Mengitung Determinan Mtrik 5 x 5 Menggunakan Metode Kofaktor</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
